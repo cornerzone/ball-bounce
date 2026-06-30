@@ -37,4 +37,4 @@ description = "Bouncing Ball. Press up/down to change."
 # increased, we interpret this as a new version being released.
 #
 # Version number must be an integer!
-version = "0.0.2"
+version = "0.0.3"
