@@ -6,6 +6,7 @@ import time
 import ctx
 import imu
 import math
+import random
 
 from events.input import Buttons, BUTTON_TYPES
 # from system.patterndisplay.events import *
@@ -27,15 +28,23 @@ class BallBounceApp(app.App):
         self.last_pos = [0,0]
         self.vel = [0,0]
         self.size = 40
+        self.started = False
 
         # self.time_update = 0
         # self.time_draw = 0
 
     def update(self, delta):
         # time_start = time.ticks_us()
+        if not self.started:
+            self.started=True
+            self.mode = random.randint(1,3)
+            self.change_mode(0)
+            delta=1
+        
 
         if self.button_states.get(BUTTON_TYPES["CANCEL"]):
             self.button_states.clear()
+            self.started = False
             self.minimise()
         else:
             self.move(delta)

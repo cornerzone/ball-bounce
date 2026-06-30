@@ -28,7 +28,7 @@ author = "robin-cm"
 license = "LGPL-3.0-only"
 
 # URL to the repository of your app.
-url = "https://github.com/cornerzone/ball-bounce"
+url = "https://www.github.com/cornerzone/ball-bounce"
 
 # Description of your app.  Maximum 140 characters!
 description = "Bouncing Ball. Press up/down to change."
